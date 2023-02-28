@@ -10,11 +10,15 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class Main {
+    // stuff here
+
     public static void main(String[] args) throws IOException {
         MutableDataSet options = new MutableDataSet();
 
         byte[] bytes = Files.readAllBytes(Path.of("input.md"));
         String s = new String(bytes, "UTF-8");
+
+        // stuff here
 
         Parser parser = Parser.builder(options).build();
         HtmlRenderer renderer = HtmlRenderer.builder(options).build();
